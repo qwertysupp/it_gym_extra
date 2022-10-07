@@ -1,0 +1,21 @@
+print(list(map(int, input().split())))
+
+i = 0
+
+while i < len(b):
+    if i==a-1:
+        break
+    elif i==a-2:
+        g+=abs(b[i+1]-b[i]) 
+        i+=1
+        break
+    z=abs(b[i+1]-b[i]) + abs(b[i+2]-b[i])
+    z1=3*abs(b[i+2]-b[i])
+    if z>z1:
+        i+=2
+        g+=z1
+    else:
+        g+=abs(b[i+1]-b[i])
+        i+=1
+        
+print("энергия",g)
