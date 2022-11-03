@@ -1,0 +1,98 @@
+/*#include <iostream>
+
+using namespace std;
+
+int main() {
+	cout << "Hello world@" << endl;
+	return 0;
+}
+*/
+
+/*#include <iostream>
+
+using namespace std;
+int main() {
+	string name;
+	cout << "what is your name" << endl;
+	cin >> name;
+	cout << "hello, " << name << "!" << endl;
+	return 0;
+}
+*/
+/*#include <iostream>
+
+using namespace std;
+
+int main() {
+	int number_a,number_b,i=0;
+	string sign, continuation;
+	cout << "enter the first number " << endl;
+	cin >> number_a;
+	cout << "enter the second number " << endl;
+	cin >> number_b;
+	cout << "enter the sign " << endl;
+	cin >> sign;
+	do {
+		if (sign == "+") {
+			i = number_a + number_b;
+		}
+		else if (sign == "-") {
+			i = number_a - number_b;
+		}
+		else if (sign == "*") {
+			i = number_a * number_b;
+		}
+		else if (sign == "/") {
+			i = number_a / number_b;
+		}
+		else if (sign == "%") {
+			i = number_a % number_b;
+		}
+		cout << i << endl;
+
+
+		cout << "do you want to continue combing " << endl;
+		cin >> continuation;
+		if (continuation == "true") {
+			cout << "enter new number" << endl;
+			cin >> number_b;
+			cout << "enter new sign" << endl;
+			cin >> sign;
+			number_a = i;
+		}
+
+	} while (continuation == "true");
+
+	return 0;
+*/
+
+
+
+#include <iostream>
+#include <stdlib.h>
+#include<time.h>
+
+using namespace std;
+
+int main() {
+	int z = 0;
+	srand(time(NULL));
+	int massiv[20];
+	for (int i = 0;i < 20;i++) {
+
+		massiv[i] = rand() % 100;
+		cout << massiv[i]<< " ";
+	}
+	for (int i = 0;i < 19;i++) {
+
+		if (massiv[i] > massiv[i + 1]){
+
+		z = massiv[i + 1];
+		massiv[i + 1] = massiv[i];
+		massiv[i] = z;
+		cout << massiv[i]<<" ";
+		}
+
+	}
+	return 0;
+}
